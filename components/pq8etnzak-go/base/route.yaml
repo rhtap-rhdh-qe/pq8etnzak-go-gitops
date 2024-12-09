@@ -1,0 +1,18 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: pq8etnzak-go
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: pq8etnzak-go 
+  name: pq8etnzak-go
+spec:
+  port:
+    targetPort: 8081 
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: pq8etnzak-go
+    weight: 100 

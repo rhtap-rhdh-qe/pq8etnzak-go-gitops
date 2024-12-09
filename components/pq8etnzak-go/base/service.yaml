@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: pq8etnzak-go
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: pq8etnzak-go 
+  name: pq8etnzak-go
+spec:
+  ports:
+  - port: 8081 
+    targetPort: 8081 
+  selector:
+    app.kubernetes.io/instance: pq8etnzak-go 
